@@ -12,4 +12,4 @@ Hi! I am a fourth-year undergraduate student at Stanford University majoring in 
 
 I am fortunate to work with Prof. [Chelsea Finn](https://ai.stanford.edu/~cbfinn/) and my mentor [Suraj Nair](https://cs.stanford.edu/~surajn/) in Stanford's IRIS lab. Before starting my PhD, I will be interning at [Google Brain](https://research.google/teams/brain/) this summer with [Pete Florence](http://www.peteflorence.com/). I am originally from Boulder, CO, and outside of research, I enjoy hiking, playing tennis, and learning to play the guitar.
 
-
+Feel free to contact me at asc8 (at) stanford (dot) edu!
