@@ -19,12 +19,12 @@ redirect_from:
 {% endfor %} -->
 
 
-<span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://arxiv.org/pdf/2103.16817.pdf)</span>  
+<span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://sites.google.com/view/dvd-human-videos)</span>  
    <sup>**Annie S. Chen**, Suraj Nair, Chelsea Finn <br>
    ***Under submission, 2021*** <br>
    We propose a simple approach, Domain-agnostic Video Discriminator (DVD), that learns multitask reward functions by training a discriminator to classify whether two videos are performing the same task. These reward functions can generalize to unseen environments and tasks by learning from a small amount of robot data and a large, diverse dataset of in-the-wild human videos.</sup> 
 
-<span style="color:CornflowerBlue">[Batch Exploration with Examples for Scalable Robotic Reinforcement Learning](https://arxiv.org/abs/2010.11917)</span>  
+<span style="color:CornflowerBlue">[Batch Exploration with Examples for Scalable Robotic Reinforcement Learning](https://sites.google.com/view/batch-exploration)</span>  
    <sup>**Annie S. Chen**\*, Hyunji Nam\*, Suraj Nair\*, Chelsea Finn <br>
    ***Robotics and Automation Letters (RA-L) & International Conference on Robotics and Automation (ICRA), 2021*** <br>
    We propose a framework for leveraging weak human supervision to enable better robotic exploration for scalable data collection. Under this framework, the robot autonomously collects high quality data with a few minutes of human supervision, providing better data for downstream offline RL.</sup> 
