@@ -18,11 +18,17 @@ redirect_from:
   {% include archive-single.html %}
 {% endfor %} -->
 
-
 <span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://sites.google.com/view/dvd-human-videos)</span>  
    <sup>**Annie S. Chen**, Suraj Nair, Chelsea Finn <br>
-   ***Under submission, 2021*** <br>
+   ***Robotics Science and Systems (RSS), 2021*** <br>
+   ***ICLR Workshop on Self-Supervised Reinforcement Learning, 2021, (Oral)*** <br>
    We propose a simple approach, Domain-agnostic Video Discriminator (DVD), that learns multitask reward functions by training a discriminator to classify whether two videos are performing the same task. These reward functions can generalize to unseen environments and tasks by learning from a small amount of robot data and a large, diverse dataset of in-the-wild human videos.</sup> 
+   
+<span style="color:CornflowerBlue">[Just Train Twice: Improving Group Robustness without Training Group Information](anniesch.github.io) 
+</span>  
+<sup>Evan Z. Liu\*, Behzad Haghgoo\*, **Annie S. Chen**\*, Aditi Raghunathan, Pang Wei Koh, Shiori Sagawa, Percy Liang, Chelsea Finn<br>
+  ***International Conference on Machine Learning (ICML), 2021 (Long Talk)*** <br>
+  A simple method that improves worst-group classification performance on datasets with spurious correlations without requiring training group annotations. JTT first detects informative training examples, which are often minority examples, by training an initial ERM classifier and extracting the misclassified examples. It then trains a final classifier by upsampling the selected examples. 
 
 <span style="color:CornflowerBlue">[Batch Exploration with Examples for Scalable Robotic Reinforcement Learning](https://sites.google.com/view/batch-exploration)</span>  
    <sup>**Annie S. Chen**\*, Hyunji Nam\*, Suraj Nair\*, Chelsea Finn <br>
