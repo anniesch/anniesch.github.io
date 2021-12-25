@@ -24,7 +24,7 @@ redirect_from:
    ***ICLR Workshop on Self-Supervised Reinforcement Learning, 2021, (Oral)*** <br>
    We propose a simple approach, Domain-agnostic Video Discriminator (DVD), that learns multitask reward functions by training a discriminator to classify whether two videos are performing the same task. These reward functions can generalize to unseen environments and tasks by learning from a small amount of robot data and a large, diverse dataset of in-the-wild human videos.</sup> 
    
-<span style="color:CornflowerBlue">[Just Train Twice: Improving Group Robustness without Training Group Information](anniesch.github.io) 
+<span style="color:CornflowerBlue">[Just Train Twice: Improving Group Robustness without Training Group Information](https://arxiv.org/pdf/2107.09044.pdf) 
 </span>  
 <sup>Evan Z. Liu\*, Behzad Haghgoo\*, **Annie S. Chen**\*, Aditi Raghunathan, Pang Wei Koh, Shiori Sagawa, Percy Liang, Chelsea Finn<br>
   ***International Conference on Machine Learning (ICML), 2021 (Long Talk)*** <br>

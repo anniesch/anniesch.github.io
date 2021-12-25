@@ -86,7 +86,7 @@ author:
   location         : "Stanford University"
   employer         :
   pubmed           : 
-  googlescholar    : 
+  googlescholar    : "https://scholar.google.com/citations?user=bslhbWgAAAAJ&hl=en&oi=ao"
   email            : "asc8@stanford.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
