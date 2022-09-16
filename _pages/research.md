@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research Papers"
+title: "Publications"
 permalink: /Research/
 author_profile: true
 redirect_from: 
@@ -17,6 +17,14 @@ redirect_from:
 <!-- %%{% for post in site.research reversed %}
   {% include archive-single.html %}
 {% endfor %} -->
+
+<span style="color:CornflowerBlue">[You Only Live Once: Single-Life Reinforcement Learning via Learned Reward Shaping](https://sites.google.com/view/dvd-human-videos)</span>  
+   <sup>**Annie S. Chen**, Archit Sharma, Sergey Levine, Chelsea Finn <br>
+   ***Neural Information Processing Systems (NeurIPS) 2022*** <br></sup> 
+
+<span style="color:CornflowerBlue">[On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)</span>  
+   <sup>Rishi Bommasani, ..., **Annie Chen**, ... Percy Liang <br>
+   Report by the [Center for Research on Foundation Models (CRFM)](https://crfm.stanford.edu/) <br></sup> 
 
 <span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://sites.google.com/view/dvd-human-videos)</span>  
    <sup>**Annie S. Chen**, Suraj Nair, Chelsea Finn <br>
