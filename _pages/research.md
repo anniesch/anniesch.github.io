@@ -20,8 +20,8 @@ redirect_from:
 
 <span style="color:CornflowerBlue">[You Only Live Once: Single-Life Reinforcement Learning](https://arxiv.org/pdf/2210.08863.pdf)</span>  
    <sup>**Annie S. Chen**, Archit Sharma, Sergey Levine, Chelsea Finn <br>
-   ***Neural Information Processing Systems (NeurIPS), 2022*** <br></sup> 
-   Agents operating in the real world must often contend with novel situations that differ from their prior experience. In these situations, the agent only has one trial to complete the given task and must adapt on-the-fly to novelty without human interventions. To model such settings more formally, we study single-life reinforcement learning (SLRL) where given prior data, an agent must complete a task in a single trial in a domain with a novel distribution shift without any human interventions or supervision. 
+   ***Neural Information Processing Systems (NeurIPS), 2022*** <br>
+   Agents operating in the real world must often contend with novel situations that differ from their prior experience. In these situations, the agent only has one trial to complete the given task and must adapt on-the-fly to novelty without human interventions. To model such settings more formally, we study single-life reinforcement learning (SLRL) where given prior data, an agent must complete a task in a single trial in a domain with a novel distribution shift without any human interventions or supervision. </sup> 
 
 <span style="color:CornflowerBlue">[On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)</span>  
    <sup>Rishi Bommasani, ..., **Annie Chen**, ... Percy Liang <br>
