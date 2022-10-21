@@ -18,6 +18,11 @@ redirect_from:
   {% include archive-single.html %}
 {% endfor %} -->
 
+<span style="color:CornflowerBlue">[Surgical Fine-Tuning Improves Adaptation to Distribution Shifts](https://arxiv.org/pdf/2210.11466.pdf)</span>  
+   <sup>Yoonho Lee\*, **Annie S. Chen**\*, Fahim Tajwar, Ananya Kumar, Huaxiu Yao, Percy Liang, Chelsea Finn <br>
+   ***Preprint, under submission, 2022*** <br>
+  We show that selectively fine-tuning a subset of layers (which we term surgical fine-tuning) matches or outperforms fine-tuning all layers. Moreover, the type of distribution shift influences which subset is more effective to tune: for example, for image corruptions, fine-tuning only the first few layers works best.
+
 <span style="color:CornflowerBlue">[You Only Live Once: Single-Life Reinforcement Learning](https://arxiv.org/pdf/2210.08863.pdf)</span>  
    <sup>**Annie S. Chen**, Archit Sharma, Sergey Levine, Chelsea Finn <br>
    ***Neural Information Processing Systems (NeurIPS), 2022*** <br>
