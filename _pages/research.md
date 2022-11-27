@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research Papers"
+title: "Publications"
 permalink: /Research/
 author_profile: true
 redirect_from: 
@@ -17,6 +17,20 @@ redirect_from:
 <!-- %%{% for post in site.research reversed %}
   {% include archive-single.html %}
 {% endfor %} -->
+
+<span style="color:CornflowerBlue">[Surgical Fine-Tuning Improves Adaptation to Distribution Shifts](https://arxiv.org/pdf/2210.11466.pdf)</span>  
+   <sup>Yoonho Lee\*, **Annie S. Chen**\*, Fahim Tajwar, Ananya Kumar, Huaxiu Yao, Percy Liang, Chelsea Finn <br>
+   ***Preprint, under submission, 2022*** <br>
+  We show that selectively fine-tuning a subset of layers (which we term surgical fine-tuning) matches or outperforms fine-tuning all layers. Moreover, the type of distribution shift influences which subset is more effective to tune: for example, for image corruptions, fine-tuning only the first few layers works best.
+
+<span style="color:CornflowerBlue">[You Only Live Once: Single-Life Reinforcement Learning](https://arxiv.org/pdf/2210.08863.pdf)</span>  
+   <sup>**Annie S. Chen**, Archit Sharma, Sergey Levine, Chelsea Finn <br>
+   ***Neural Information Processing Systems (NeurIPS), 2022*** <br>
+   Agents operating in the real world must often contend with novel situations that differ from their prior experience. In these situations, the agent only has one trial to complete the given task and must adapt on-the-fly to novelty without human interventions. To model such settings more formally, we study single-life reinforcement learning (SLRL) where given prior data, an agent must complete a task in a single trial in a domain with a novel distribution shift without any human interventions or supervision. </sup> 
+
+<span style="color:CornflowerBlue">[On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)</span>  
+   <sup>Rishi Bommasani, ..., **Annie Chen**, ... Percy Liang <br>
+   Report by the [Center for Research on Foundation Models (CRFM)](https://crfm.stanford.edu/), 2021 <br></sup> 
 
 <span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://sites.google.com/view/dvd-human-videos)</span>  
    <sup>**Annie S. Chen**, Suraj Nair, Chelsea Finn <br>
