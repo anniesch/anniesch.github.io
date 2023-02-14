@@ -18,9 +18,14 @@ redirect_from:
   {% include archive-single.html %}
 {% endfor %} -->
 
+<span style="color:CornflowerBlue">[Project and Probe: Sample-Efficient Domain Adaptation by Interpolating Orthogonal Features](https://arxiv.org/pdf/2302.05441.pdf)</span>  
+   <sup>**Annie S. Chen**\*, Yoonho Lee\*, Amrith Setlur, Sergey Levine, Chelsea Finn <br>
+   ***Preprint, 2023*** <br>
+  We propose Project and Probe (Pro^2), a lightweight + data-efficient approach for domain adaptation. Pro^2 first learns a linear projection that maps a pre-trained embedding onto orthogonal directions while being predictive of labels in the source dataset. The goal of this step is to learn a variety of predictive features, so that at least some of them remain useful after distribution shift. Pro^2 then learns a linear classifier on top of these projected features using a small target dataset. 
+
 <span style="color:CornflowerBlue">[Surgical Fine-Tuning Improves Adaptation to Distribution Shifts](https://arxiv.org/pdf/2210.11466.pdf)</span>  
    <sup>Yoonho Lee\*, **Annie S. Chen**\*, Fahim Tajwar, Ananya Kumar, Huaxiu Yao, Percy Liang, Chelsea Finn <br>
-   ***Preprint, under submission, 2022*** <br>
+   ***International Conference on Learning Representations (ICLR), 2023*** <br>
   We show that selectively fine-tuning a subset of layers (which we term surgical fine-tuning) matches or outperforms fine-tuning all layers. Moreover, the type of distribution shift influences which subset is more effective to tune: for example, for image corruptions, fine-tuning only the first few layers works best.
 
 <span style="color:CornflowerBlue">[You Only Live Once: Single-Life Reinforcement Learning](https://arxiv.org/pdf/2210.08863.pdf)</span>  
