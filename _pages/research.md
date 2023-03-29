@@ -18,6 +18,11 @@ redirect_from:
   {% include archive-single.html %}
 {% endfor %} -->
 
+<span style="color:CornflowerBlue">[Language-Driven Representation Learning for Robotics](https://arxiv.org/pdf/2302.12766.pdf)</span>  
+   <sup>Siddharth Karamcheti, Suraj Nair, **Annie S. Chen**, Thomas Kollar, Chelsea Finn, Dorsa Sadigh, Percy Liang <br>
+   ***Preprint, 2023*** <br>
+  We propose Voltron, which uses language to learn better visual represnetations for a diverse range of robotics problems by trading off conditioning and generation.  
+
 <span style="color:CornflowerBlue">[Project and Probe: Sample-Efficient Domain Adaptation by Interpolating Orthogonal Features](https://arxiv.org/pdf/2302.05441.pdf)</span>  
    <sup>**Annie S. Chen**\*, Yoonho Lee\*, Amrith Setlur, Sergey Levine, Chelsea Finn <br>
    ***Preprint, 2023*** <br>
