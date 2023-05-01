@@ -20,12 +20,12 @@ redirect_from:
 
 <span style="color:CornflowerBlue">[Language-Driven Representation Learning for Robotics](https://arxiv.org/pdf/2302.12766.pdf)</span>  
    <sup>Siddharth Karamcheti, Suraj Nair, **Annie S. Chen**, Thomas Kollar, Chelsea Finn, Dorsa Sadigh, Percy Liang <br>
-   ***Preprint, 2023*** <br>
+   ***Robotics: Science and Systems (RSS), 2023*** <br>
   We propose Voltron, which uses language to learn better visual represnetations for a diverse range of robotics problems by trading off conditioning and generation.  
 
 <span style="color:CornflowerBlue">[Project and Probe: Sample-Efficient Domain Adaptation by Interpolating Orthogonal Features](https://arxiv.org/pdf/2302.05441.pdf)</span>  
    <sup>**Annie S. Chen**\*, Yoonho Lee\*, Amrith Setlur, Sergey Levine, Chelsea Finn <br>
-   ***Preprint, 2023*** <br>
+   ***ICLR TrustML-(un)Limited Workshop, 2023 (Oral)*** <br>
   We propose Project and Probe (Pro^2), a lightweight + data-efficient approach for domain adaptation. Pro^2 first learns a linear projection that maps a pre-trained embedding onto orthogonal directions while being predictive of labels in the source dataset. The goal of this step is to learn a variety of predictive features, so that at least some of them remain useful after distribution shift. Pro^2 then learns a linear classifier on top of these projected features using a small target dataset. 
 
 <span style="color:CornflowerBlue">[Surgical Fine-Tuning Improves Adaptation to Distribution Shifts](https://arxiv.org/pdf/2210.11466.pdf)</span>  
