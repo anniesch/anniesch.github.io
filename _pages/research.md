@@ -18,6 +18,11 @@ redirect_from:
   {% include archive-single.html %}
 {% endfor %} -->
 
+<span style="color:CornflowerBlue">[Confidence-Based Model Selection: When to Take Shortcuts for Subpopulation Shifts](https://arxiv.org/pdf/2306.11120.pdf)</span>  
+   <sup>**Annie S. Chen**, Yoonho Lee, Amrith Setlur, Sergey Levine, Chelsea Finn <br>
+   ***ArXiv Preprint, 2023*** <br>
+  We propose COnfidence-baSed MOdel Selection (COSMOS), where we adaptively choose among models with different strengths to achieve high performance on both majority and minority subpopulations. COSMOS does not require any target labels or group annotations and can even be used for hyperparameter tuning. 
+
 <span style="color:CornflowerBlue">[Language-Driven Representation Learning for Robotics](https://arxiv.org/pdf/2302.12766.pdf)</span>  
    <sup>Siddharth Karamcheti, Suraj Nair, **Annie S. Chen**, Thomas Kollar, Chelsea Finn, Dorsa Sadigh, Percy Liang <br>
    ***Robotics: Science and Systems (RSS), 2023*** <br>
@@ -38,10 +43,6 @@ redirect_from:
    ***Neural Information Processing Systems (NeurIPS), 2022*** <br>
    Agents operating in the real world must often contend with novel situations that differ from their prior experience. In these situations, the agent only has one trial to complete the given task and must adapt on-the-fly to novelty without human interventions. To model such settings more formally, we study single-life reinforcement learning (SLRL) where given prior data, an agent must complete a task in a single trial in a domain with a novel distribution shift without any human interventions or supervision. </sup> 
 
-<span style="color:CornflowerBlue">[On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)</span>  
-   <sup>Rishi Bommasani, ..., **Annie Chen**, ... Percy Liang <br>
-   Report by the [Center for Research on Foundation Models (CRFM)](https://crfm.stanford.edu/), 2021 <br></sup> 
-
 <span style="color:CornflowerBlue">[Learning Generalizable Robotic Reward Functions from "In-The-Wild" Human Videos](https://sites.google.com/view/dvd-human-videos)</span>  
    <sup>**Annie S. Chen**, Suraj Nair, Chelsea Finn <br>
    ***Robotics Science and Systems (RSS), 2021*** <br>
@@ -58,6 +59,10 @@ redirect_from:
    <sup>**Annie S. Chen**\*, Hyunji Nam\*, Suraj Nair\*, Chelsea Finn <br>
    ***Robotics and Automation Letters (RA-L) & International Conference on Robotics and Automation (ICRA), 2021*** <br>
    We propose a framework for leveraging weak human supervision to enable better robotic exploration for scalable data collection. Under this framework, the robot autonomously collects high quality data with a few minutes of human supervision, providing better data for downstream offline RL.</sup> 
+
+<span style="color:CornflowerBlue">[On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258)</span>  
+   <sup>Rishi Bommasani, ..., **Annie Chen**, ... Percy Liang <br>
+   Report by the [Center for Research on Foundation Models (CRFM)](https://crfm.stanford.edu/), 2021 <br></sup> 
    
 <span style="color:CornflowerBlue">[Limit Theorems for Descents in Permutations and Arithmetic Progressions in Z/pZ](https://arxiv.org/abs/1810.02425)</span>  
    <sup>Bryce Cai, **Annie S. Chen**, Ben Heller, Eyob Tsegaye <br>
