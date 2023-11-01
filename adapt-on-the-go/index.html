@@ -1,0 +1,530 @@
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+  <html>
+
+  <!-- ======================================================================= -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+  <style type="text/css">
+    body {
+      font-family: "Crimson Text","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight:300;
+      font-size:18px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    pre {
+      background-color: #f6f8fa;
+      padding: 16px;
+    }
+
+    code {
+      font-family: "SFMono-Regular","Consolas","Liberation Mono","Menlo",monospace;
+      overflow: scroll;
+    }
+
+    .description {
+      max-width: 1000px;
+      padding: 0px;
+    }
+
+    h1 {
+      font-family: "Source Sans Pro";
+      font-weight:300;
+    }
+
+    h2 {
+      font-family: "Source Sans Pro";
+      font-weight:200;
+    }xw
+
+    div {
+      max-width: 95%;
+      margin:auto;
+      padding: 10px;
+    }
+
+    .table-like {
+      display: flex;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    .box {
+      padding: 0px;
+      text-align: center;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 1279px) {
+      .box {
+        width: 100%;
+      }
+    }
+
+		.table-like hr {
+			width: 100%;
+      flex-basis: 100%;
+      height: 0;
+      margin: 0;
+      border: 0;
+		}
+
+    .disclaimerbox {
+      background-color: #eee;
+      border: 1px solid #eeeeee;
+      border-radius: 10px ;
+      -moz-border-radius: 10px ;
+      -webkit-border-radius: 10px ;
+      padding: 20px;
+    }
+
+    video.header-vid {
+      height: 140px;
+      border: 1px solid black;
+      border-radius: 10px ;
+      -moz-border-radius: 10px ;
+      -webkit-border-radius: 10px ;
+    }
+
+    img {
+      padding: 0;
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+
+    img.header-img {
+      height: 140px;
+      border: 1px solid black;
+      border-radius: 10px ;
+      -moz-border-radius: 10px ;
+      -webkit-border-radius: 10px ;
+    }
+
+    img.rounded {
+      border: 1px solid #eeeeee;
+      border-radius: 10px ;
+      -moz-border-radius: 10px ;
+      -webkit-border-radius: 10px ;
+    }
+
+    a:link,a:visited
+    {
+      color: #1367a7;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #208799;
+    }
+
+    td.dl-link {
+      height: 160px;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+      box-shadow:
+              0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+              5px 5px 0 0px #fff, /* The second layer */
+              5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+              10px 10px 0 0px #fff, /* The third layer */
+              10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+              15px 15px 0 0px #fff, /* The fourth layer */
+              15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+              20px 20px 0 0px #fff, /* The fifth layer */
+              20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+              25px 25px 0 0px #fff, /* The fifth layer */
+              25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+      margin-left: 10px;
+      margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+      box-shadow:
+              0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+              5px 5px 0 0px #fff, /* The second layer */
+              5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+              10px 10px 0 0px #fff, /* The third layer */
+              10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: 30px;
+      margin-bottom: 5px;
+    }
+
+    .vert-cent {
+      position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr
+    {
+      border: 0;
+      height: 1px;
+      max-width: 1100px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+
+    #authors td {
+      padding-bottom:5px;
+      padding-top:30px;
+    }
+
+    .mySlides {display: none}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1280px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 25px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .caption {
+      color: #000000;
+      font-size: 25;
+      width: 100%;
+      text-align: center;
+      padding: 0px;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #000000;
+      font-size: 18px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+  </style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <head>
+  <div max-width=100%>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Adapt On-the-Go:Behavior Modulation for Single-Life Robot Deployment</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+</head>
+
+<body>
+
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;font-family:Source Sans Pro;">Adapt On-the-Go: Behavior Modulation <br> for Single-Life Robot Deployment</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <hr>
+          <center><span style="font-size:25px" class="line-break">Annie S. Chen*, Govind Chada*, Laura Smith, Archit Sharma, Zipeng Fu, <br> Sergey Levine, Chelsea Finn</span></center>
+      </div>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <hr>
+          <center><span style="font-size:20px" class="line-break"><a href="anniesch.github.io/papers/roam.pdf">Paper</a> | <a href="anniesch.github.io/papers/roam.pdf">Code</a></span></center>
+      </div>
+      
+      <div style="width:800px; margin:0 auto" align="justify">
+        <p><b>Abstract.</b> 
+          To succeed in the real world, robots must cope with situations that differ from those seen during training. We study the problem of adapting on-the-fly to such novel scenarios during deployment, by drawing upon a diverse repertoire of previously learned behaviors. Our approach, RObust Autonomous Modulation (ROAM), introduces a mechanism based on the perceived value of pre-trained behaviors
+          to select and adapt pre-trained behaviors to the situation at hand. Crucially, this adaptation process all happens within a single episode at test time, without any human supervision. We provide theoretical analysis of our selection mechanism and demonstrate that ROAM enables a robot to adapt rapidly to changes in dynamics both in simulation and on a real Go1 quadruped, even successfully moving forward with roller skates on its feet. Our approach adapts over 2x as efficiently compared
+          to existing methods when facing a variety of out-of-distribution situations during deployment by effectively choosing and adapting relevant behaviors on-the-fly.
+        </div>
+
+      <div style="max-width:900px">
+        <hr>
+        <center id="videos"><h1>On-The-Go Adaptation via Robust Autonomous Modulation</h1></center>
+        <p>
+        </p>
+        <div class="table-like" style="justify-content:space-evenly;margin:auto;padding:0px;">
+          <div>
+            <video width="600" autoplay muted loop>
+              <source src="resources/robot_exps/dynamic_demo_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <img src='resources/figures/teaser.png' width="800">
+            <!-- <video width="800" autoplay muted loop>
+              <source src="resources/real_rollouts_1p/spartn/moving-objects.mp4" type="video/mp4">
+            </video> -->
+          </div>
+        </div>
+      </div>
+
+      <div style="max-width:900px">
+        <hr>
+        <center><h1>Method Overview</h1></center>
+        <p>
+          <b>Key Idea:</b>  Use the value functions of the behaviors to identify an appropriate behavior at every timestep during deployment. With proper regularization, value functions provide a good indication of how well different behaviors will perform in a given situation.
+          <!-- During the initial fine-tuning phase of ROAM, we fine-tune each behavior using its existing data buffer and standard Bellman error, with an additional cross-entropy loss between the softmax values of all behaviors and the behavior index (as the label) from which the state was visited. Then at test-time, at each time-step, we sample from the softmax distribution of the behaviors’ values at the current state and execute the sampled policy. -->
+        </p>
+        <p>
+          <b>(1)</b> Fine-tune each behavior's value function to <b>encourage identifiability in familiar states</b> with an additional behavior classification loss.
+        </p>
+        <p>
+          <b>(2)</b> At deployment time, sample behavior with respect to classification probability, execute action, optionally fine-tune further.
+        </p>
+        <div class="table-like" style="justify-content:space-evenly;margin:auto;padding:0px;">
+          <img src='resources/figures/method.png' width="800">
+          <!-- <img src="resources/figures/teaser.png" alt="SPARTN teaser figure" style="width:300px;">
+          <img src="resources/figures/overview.png" alt="Overview figure of SPARTN training" style="width:400px;"> -->
+        </div>
+        <p>
+          Benefits of ROAM: (1) Doesn't require learning a separate high-level controller, (2) Agnostic to how pre-trained policies and value functions are obtained, (3) Provides simple mechanism for adapting within a single episode to a variety of situations.
+        </p>
+      </div>
+
+      <div style="width:1280; margin:0 auto; text-align=left" align="left">
+        <hr>
+
+        <center id="videos"><h1>Real-World Trials on the Go1</h1></center>
+        <div class="description">
+          <p>
+            Here we show evaluation trials where we find that ROAM can adapt on-the-go to OOD situations in the real world. ROAM enables the robot to slide forward on roller skates without ever having seen roller skates during training.
+            ROAM can also pull heavy luggage and pull loads with changing weights without having been trained to pull any object before.
+          </p>
+          <center><h2>Roller Skates</h2></center>
+          <p>
+            
+          </p>
+        </div>
+
+        <!-- <div class="table-like" style="justify-content:space-evenly;margin:auto;padding:0px;">
+          <div>
+            <video width="800" autoplay muted loop>
+              <source src="resources/real_rollouts_1p/spartn/moving-objects.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div> -->
+
+        <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+          <div>
+            <center><p align="center">Walking (No Behavior Modulation) </p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_walking_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">High-Level Classifier</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_hlc_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">ROAM (ours)</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_ours1_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      
+
+        <div class="description">
+          <center><h2>Heavy Luggage (13.6 lb)</h2></center>
+          </div>
+
+          <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+          <div>
+            <center><p align="center">Walking (No Behavior Modulation) </p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_walking_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">High-Level Classifier</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_hlc_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">ROAM (ours)</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/luggage_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="description">
+          <center><h2>Dynamic Load</h2></center>
+          </div>
+
+          <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+          <div>
+            <center><p align="center">Walking (No Behavior Modulation) </p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_walking_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">High-Level Classifier</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_hlc_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <center><p align="center">ROAM (ours)</p></center>
+            <video width="300" autoplay muted loop>
+              <source src="resources/robot_exps/skates_ours1_edited.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+          <!-- <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+            <div>
+              <center><p align="center">Heavy Luggage (13.6 lb) </p></center>
+              <video width="300" autoplay muted loop>
+                <source src="resources/robot_exps/luggage_edited.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <center><p align="center">Dynamic Load</p></center>
+              <video width="300" autoplay muted loop>
+                <source src="resources/robot_exps/skates_hlc_edited.mp4" type="video/mp4">
+              </video>
+            </div>
+          <div>
+        </div>
+      </div> -->
+
+
+      <div style="max-width:800px">
+        <hr>
+        <center id="videos"><h1>ROAM reacts quickly to changing situations</h1></center>
+        <p>
+          In our simulated experiments, we find that ROAM is over 2x as efficient as prior methods that are designed for fast adaptation. 
+          Here we plot the behavior distribution for ROAM over the course of a single-life trial, where the agent is tasked with adapting to different stiffness on-the-go. 
+          Green bars indicate relevant behaviors to the current situations while red bars indicate irrelevant behaviors.
+          We find that ROAM can quickly react to changing situations by choosing and adapting relevant behaviors on-the-fly.
+        </p>
+        <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+          <div>
+            <center><p align="center">Simulation</p></center>
+            <video width="500" autoplay muted loop>
+              <source src="resources/sim_traj.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const Slideshow = {
+          slideIndex: 1,
+          name: "",
+          plusSlides(n) {
+            this.showSlides(this.slideIndex += n);
+          },
+          currentSlide(n) {
+            this.showSlides(this.slideIndex = n);
+          },
+          showSlides(n) {
+            let i;
+            let container = document.getElementById(this.name + "-container")
+            let slides = container.getElementsByClassName("mySlides");
+            let dots = document.getElementById(this.name + "-dots").getElementsByClassName("dot");
+            if (n > slides.length) {this.slideIndex = 1}    
+            if (n < 1) {this.slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[this.slideIndex-1].style.display = "block";  
+            dots[this.slideIndex-1].className += " active";
+          }
+        }
+
+        slideshow1 = Object.create(Slideshow);
+        slideshow1.name = "sim"
+        slideshow1.showSlides(slideshow1.slideIndex);
+
+        slideshow2 = Object.create(Slideshow);
+        slideshow2.name = "real-success"
+        slideshow2.showSlides(slideshow2.slideIndex);
+
+        slideshow3 = Object.create(Slideshow);
+        slideshow3.name = "real-fail1"
+        slideshow3.showSlides(slideshow3.slideIndex);
+
+        slideshow4 = Object.create(Slideshow);
+        slideshow4.name = "real-fail2"
+        slideshow4.showSlides(slideshow4.slideIndex);
+      </script>
+</body>
+</html>
