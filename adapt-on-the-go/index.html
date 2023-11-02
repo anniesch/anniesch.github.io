@@ -299,14 +299,15 @@
           <center><span style="font-size:20px" class="line-break"><a href="anniesch.github.io/papers/roam.pdf">Paper</a> | <a href="anniesch.github.io/papers/roam.pdf">Code</a></span></center>
       </div>
       
-      <div style="width:800px; margin:0 auto" align="justify">
+      <!-- <div style="width:800px; margin:0 auto" align="justify"> -->
+      <div style="max-width:900px; margin:auto; text-align:justify;">
         <p><b>Abstract.</b> 
           To succeed in the real world, robots must cope with situations that differ from those seen during training. We study the problem of adapting on-the-fly to such novel scenarios during deployment, by drawing upon a diverse repertoire of previously learned behaviors. Our approach, RObust Autonomous Modulation (ROAM), introduces a mechanism based on the perceived value of pre-trained behaviors
           to select and adapt pre-trained behaviors to the situation at hand. Crucially, this adaptation process all happens within a single episode at test time, without any human supervision. We provide theoretical analysis of our selection mechanism and demonstrate that ROAM enables a robot to adapt rapidly to changes in dynamics both in simulation and on a real Go1 quadruped, even successfully moving forward with roller skates on its feet. Our approach adapts over 2x as efficiently compared
           to existing methods when facing a variety of out-of-distribution situations during deployment by effectively choosing and adapting relevant behaviors on-the-fly.
         </div>
 
-      <div style="max-width:900px">
+      <div style="max-width:900px; margin:auto; text-align:center;">
         <hr>
         <center id="videos"><h1>On-The-Go Adaptation via Robust Autonomous Modulation</h1></center>
         <p>
@@ -326,7 +327,7 @@
         </div>
       </div>
 
-      <div style="max-width:900px">
+      <div style="max-width:900px; margin:auto; text-align:center;">
         <hr>
         <center><h1>Method Overview</h1></center>
         <p>
@@ -349,19 +350,17 @@
         </p>
       </div>
 
-      <div style="width:1280; margin:0 auto; text-align=left" align="left">
+      <div style="max-width:900px; margin:auto; text-align:center;"></div>
+      <!-- <div style="width:1280; margin:0 auto; text-align=left" align="left"> -->
         <hr>
 
         <center id="videos"><h1>Real-World Trials on the Go1</h1></center>
-        <div class="description">
+        <div style="max-width:900px; margin:auto; text-align:justify;">
           <p>
             Here we show evaluation trials where we find that ROAM can adapt on-the-go to OOD situations in the real world. ROAM enables the robot to slide forward on roller skates without ever having seen roller skates during training.
             ROAM can also pull heavy luggage and pull loads with changing weights without having been trained to pull any object before.
           </p>
           <center><h2>Roller Skates</h2></center>
-          <p>
-            
-          </p>
         </div>
 
         <!-- <div class="table-like" style="justify-content:space-evenly;margin:auto;padding:0px;">
@@ -373,6 +372,7 @@
         </div> -->
 
         <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
+          
           <div>
             <center><p align="center">Walking (No Behavior Modulation) </p></center>
             <video width="300" autoplay muted loop>
@@ -394,7 +394,7 @@
         </div>
       
 
-        <div class="description">
+        <div style="max-width:900px; margin:auto; text-align:justify;">
           <center><h2>Heavy Luggage (13.6 lb)</h2></center>
           </div>
 
@@ -419,7 +419,7 @@
           </div>
         </div>
 
-        <div class="description">
+        <div style="max-width:900px; margin:auto; text-align:justify;">
           <center><h2>Dynamic Load</h2></center>
           </div>
 
@@ -443,6 +443,8 @@
             </video>
           </div>
         </div>
+        <p> 
+          </p>
       </div>
 
           <!-- <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;">
@@ -463,7 +465,7 @@
       </div> -->
 
 
-      <div style="max-width:800px">
+      <div style="max-width:800px; margin:auto; text-align:center;">
         <hr>
         <center id="videos"><h1>ROAM reacts quickly to changing situations</h1></center>
         <p>
