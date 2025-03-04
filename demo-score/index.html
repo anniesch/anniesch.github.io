@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Demo-SCORE: Curating Demonstrations using Online Experience.">
+  <meta name="keywords" content="DemoSCORE, data filtering, behavior cloning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo-SCORE: Curating Demonstrations using Online Experience</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Demo-SCORE: Curating Demonstrations using Online Experience</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Annie S. Chen*,
+            </span>
+            <span class="author-block">
+              Alec M. Lessing*,
+            </span>
+            <span class="author-block">
+              Yuejiang Liu,
+            </span>
+            <span class="author-block">
+              Chelsea Finn
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demoscore_video_site.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Many robot demonstration datasets contain heterogeneous demonstrations of varying quality.
+             This heterogeneity may benefit policy pre-training, but can hinder robot performance when used with a final imitation
+              learning objective. In particular, some strategies in the data may be less reliable than others or may be underrepresented
+               in the data, leading to poor performance when such strategies are sampled at test time. Moreover, such unreliable or underrepresented
+                strategies can be difficult even for people to discern, and sifting through demonstration datasets is time-consuming and costly. On the other hand, policy performance when trained on such demonstrations can reflect the reliability of different strategies. We thus propose for robots to self-curate based on online robot experience (Demo-SCORE). More specifically, we train and cross-validate a classifier to discern successful policy roll-outs from unsuccessful ones and use the classifier to filter heterogeneous demonstration datasets. Our experiments in simulation and the real world show that Demo-SCORE can effectively identify suboptimal demonstrations without manual curation. Notably, Demo-SCORE achieves over 15-35% higher absolute success rate in the resulting policy compared to the base policy trained with all original demonstrations.
+          </p>
+          <img src="./static/images/method.png">
+          Our approach consists of the following main steps: first, we train an initial policy on the full set of demonstrations. We then use the policy to generate rollouts that are used to train a data quality classifier to distinguish between successful and failed outcomes. This classifier is subsequently applied to the original dataset to perform filtering (which can be done at the episode level or the chunk level), retaining only the reliable episodes. 
+          One challenge is that classifier may overfit to rollouts from one policy checkpoint--to address this, we cross-validate its performance on rollouts from another checkpoint in the initial policy training run. 
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </section>
+
+
+
+  <section class="hero is-light">
+    <div class="container">
+      <div class="container" style="width: 90%; margin: 0 auto; padding: 20px;">
+        <h6 class="title is-2" style="text-align: center;">Demo-SCORE Applied to Challenging Real-World Tasks</h6>
+      </div>
+      <div class="container" style="width: 80%; margin: 0 auto; padding: 5px; display: flex; align-items: center;">
+        <!-- Left half with text -->
+        <div style="flex: 1; padding-right: 10px;">
+          <p>
+            We evaluate Demo-SCORE on 5 real-world tasks using an ALOHA bimanual manipulation system. For each task, we compare a policy trained on the full mixed-quality set of demonstrations to a policy trained on a dataset filtered with Demo-SCORE. The full dataset for each task was either collected via crowdsourcing or designed to mimic the multimodality of a crowdsourced dataset. Demo-SCORE improved absolute success rates by 15-35% for each task.
+          </p>
+        </div>
+        <!-- Right half with image -->
+        <div style="flex: 1; padding-left: 10px;">
+          <img src="./static/images/real_exps3.png" alt="Descriptive alt text" style="width: 100%; height: auto;">
+        </div>
+      </div>
+  
+      <table>
+        <!-- TODO: consider finishing version with carousel for different tasks. An advantage of this is we could include demo and rollout videos on each page of the carousel without it feeling super cluttered. -->
+          <tbody>
+           
+          <tr style="height:1px;">
+            <td style="height:inherit;">
+              <div style="min-width:150px; padding-top:8px;">
+                <h3 class="title is-4">JellyBeans*</h3>
+                <p>*Crowdsourced dataset</p>
+              </div>
+            </td>
+            <td>
+              <div class="columns is-centered">
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/JellybeansBeforeWeb1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Base policy: The original policy trained on all demonstrations often employs poor strategies, grasping the cup so that it cannot not easily be placed on the table later.</p>
+                  </div>
+                </div>
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/JellybeansAfterWeb2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Demo-SCORE: After training a new policy on a dataset filtered with Demo-SCORE, the policy grasps the cup in a manner conducive to the next step in the task.</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr style="height:1px;">
+            <td style="height:inherit;">
+              <div style="min-width:200px; padding-top:8px;">
+                <h3 class="title is-4">Strawberry</h3>
+              </div>
+            </td>
+            <td>
+              <div class="columns is-centered">
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/StrawberryBefore1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Base policy: the policy sometimes attempts to grasp the strawberry from above. This strategy is more natural to a human teleoperator, but is less robust due to the narrow, round cross-section of the strawberry.</p>
+                  </div>
+                </div>
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/StrawberryAfter1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Demo-SCORE: the policy grasps the strawberry from the side, which is a more robust method for this embodiment.</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr style="height:1px;">
+            <td style="height:inherit;">
+              <div style="min-width:200px; padding-top:8px;">
+                <h3 class="title is-4">Spoon</h3>
+              </div>
+            </td>
+            <td>
+              <div class="columns is-centered">
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/SpoonBefore1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Base policy</p>
+                  </div>
+                </div>
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/SpoonAfter1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Demo-SCORE</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr style="height:1px;">
+            <td style="height:inherit;">
+              <div style="min-width:200px; padding-top:8px;">
+                <h3 class="title is-4">Chocolate</h3>
+              </div>
+            </td>
+            <td>
+              <div class="columns is-centered">
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/ChocolateBefore1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Base policy</p>
+                  </div>
+                </div>
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/ChocolateAfter1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Demo-SCORE</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr style="height:1px;">
+            <td style="height:inherit;">
+              <div style="min-width:200px; padding-top:8px;">
+                <h3 class="title is-4">Sharpie</h3>
+              </div>
+            </td>
+            <td>
+              <div class="columns is-centered">
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/SharpieBefore1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Base policy</p>
+                  </div>
+                </div>
+                <div class="column is-full-width is-centered has-text-centered"><div class="vsc-controller"></div>
+                  <video controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/SharpieAfter1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+                  <div class="content is-two-third has-text-centered">
+                  <p>Demo-SCORE</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+        
+      </tbody></table>
+    </div>
+  </section>
+
+
+
+  <div class="container">
+    <div class="container" style="width: 90%; margin: 0 auto; padding: 20px;">
+      <h6 class="title is-2" style="text-align: center;">Real-World Rollout and Demo Distributions</h6>
+    </div>
+    <div class="container" style="width: 60%; margin: 0 auto; padding: 5px;">
+      <img src="./static/images/rollout_analysis5.png">
+      <p>
+        For the strawberry and sharpie tasks, we show the rollout distributions at early and late checkpoints of the initial policy run,
+        the composition of demonstrations kept by Demo-SCORE compared to the original distribution of demonstrations, and the resulting rollout distribution after filtering.
+        The x axis represents step number in the trajectory, and the y axis represents the first PCA component of the joint positions. Demo-SCORE keeps demos that resemble successful rollouts in the dataset while filtering out demos that resemble failed rollouts. The new policy trained on the filtered dataset then resembles the successful rollouts.
+      </p>
+      <br>
+    </div>
+</div>
+
+
+  <!-- <section class="hero is-light">
+    <div class="container" style="width: 90%; margin: 0 auto; padding: 20px;">
+      <h6 class="title is-2" style="text-align: center;">Simulation Results</h6>
+      <div class="container" style="width: 90%; margin: 0 auto; padding: 20px;text-align: center;">
+        <img src="./static/images/envs5.png">
+        
+    </div>
+    TODO: make environment ims nicer if want to keep. Probably use videos showing A and B scripts?
+    </div>
+    TODO: Do we want sim results here? If so we would have to explain sim experimental setup a bit
+
+
+    <div class="container" style="width: 60%; margin: 0 auto; padding: 5px;">
+      <img src="./static/images/sim_results4.png">
+      <p>
+        We report the success rates and 90% confidence intervals of the policy trained on the filtered demonstrations by Demo-SCORE along with prior methods leveraging online rollouts, across 256 trials for a variety of heterogeneous demonstration data mixtures. For example, in the square peg domain, ``100 Human, 50/50 SquareA/B'' indicates a demonstration dataset with 100 trajectories  from the proficient human dataset, 50 from the SquareA script, and 50 from SquareB. Across both tasks and all data mixtures, Demo-SCORE matches or outperforms all other methods.
+      </p>
+      <br>
+    </div>
+    </section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> <!-- and <a href="https://robot-parkour.github.io/"><span class="dnerf">Robot Parkour Learning</span></a>. --></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
